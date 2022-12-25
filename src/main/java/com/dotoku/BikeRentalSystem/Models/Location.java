@@ -22,7 +22,7 @@ public class Location {
     private String city;
 
     @Column(name="loc_zip")
-    private Integer zip;
+    private long zip;
 
     @Column(name="loc_phone")
     private String phone;
@@ -30,7 +30,7 @@ public class Location {
     public Location() {
     }
 
-    public Location(long locationId, String state, String address, String city, Integer zip, String phone) {
+    public Location(long locationId, String state, String address, String city, long zip, String phone) {
         this.locationId = locationId;
         this.state = state;
         this.address = address;
@@ -72,11 +72,11 @@ public class Location {
         this.city = city;
     }
 
-    public Integer getZip() {
+    public long getZip() {
         return zip;
     }
 
-    public void setZip(Integer zip) {
+    public void setZip(long zip) {
         this.zip = zip;
     }
 
