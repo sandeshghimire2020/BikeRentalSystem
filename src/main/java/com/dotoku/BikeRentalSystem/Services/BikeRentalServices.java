@@ -1,7 +1,7 @@
 package com.dotoku.BikeRentalSystem.Services;
 
 import com.dotoku.BikeRentalSystem.Models.Member;
-import com.dotoku.BikeRentalSystem.Repository.CarRentalRepository;
+import com.dotoku.BikeRentalSystem.Repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
@@ -12,10 +12,10 @@ import java.util.List;
 public class BikeRentalServices {
 
     @Autowired
-    private CarRentalRepository carRentalRepository;
+    private MemberRepository memberRepository;
 
     public List<Member> getAllMembers(){
-        return carRentalRepository.findAll();
+        return memberRepository.findAll();
     }
 
 

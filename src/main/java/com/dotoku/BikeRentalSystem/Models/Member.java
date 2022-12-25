@@ -8,29 +8,35 @@ import jakarta.persistence.*;
 public class Member {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer memId;
+    private long memId;
 
     @Column(name="member_FN")
     private String memFN;
+
     @Column(name="member_LN")
     private String memLN;
+
     @Column(name="member_phone")
     private String memPhone;
+
     @Column(name="member_address")
     private String momAddress;
+
     @Column(name="member_Reg_date")
     private String memRegDate;
+
     @Column(name="member_balance")
-    private String memBalance;
+    private float memBalance;
+
     @Column(name="member_late_fee")
-    private String lateFee;
+    private float lateFee;
 
 
     public Member() {
     }
 
-    public Member(String memFN, String memLN, String memPhone, String momAddress, String memRegDate, String memBalance, String lateFee) {
+    public Member(long memId, String memFN, String memLN, String memPhone, String momAddress, String memRegDate, float memBalance, float lateFee) {
+        this.memId = memId;
         this.memFN = memFN;
         this.memLN = memLN;
         this.memPhone = memPhone;
@@ -38,6 +44,14 @@ public class Member {
         this.memRegDate = memRegDate;
         this.memBalance = memBalance;
         this.lateFee = lateFee;
+    }
+
+    public long getMemId() {
+        return memId;
+    }
+
+    public void setMemId(long memId) {
+        this.memId = memId;
     }
 
     public String getMemFN() {
@@ -80,19 +94,19 @@ public class Member {
         this.memRegDate = memRegDate;
     }
 
-    public String getMemBalance() {
+    public float getMemBalance() {
         return memBalance;
     }
 
-    public void setMemBalance(String memBalance) {
+    public void setMemBalance(float memBalance) {
         this.memBalance = memBalance;
     }
 
-    public String getLateFee() {
+    public float getLateFee() {
         return lateFee;
     }
 
-    public void setLateFee(String lateFee) {
+    public void setLateFee(float lateFee) {
         this.lateFee = lateFee;
     }
 
@@ -105,8 +119,9 @@ public class Member {
                 ", memPhone='" + memPhone + '\'' +
                 ", momAddress='" + momAddress + '\'' +
                 ", memRegDate='" + memRegDate + '\'' +
-                ", memBalance='" + memBalance + '\'' +
-                ", lateFee='" + lateFee + '\'' +
+                ", memBalance=" + memBalance +
+                ", lateFee=" + lateFee +
                 '}';
     }
 }
+

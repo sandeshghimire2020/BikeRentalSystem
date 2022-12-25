@@ -29,7 +29,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="22426408-1db0-4d37-8467-5faae4401f53">
-      <console name="BikeRental" type="STANDARD" schema="information_schema" session="Main" />
+      <console name="BikeRental" type="STANDARD" schema="information_schema" session="Main"><![CDATA[INSERT INTO member VALUES(1,'22','30000','sandesh','ghimire','3203323445','23-12-2022','535 5th ave S');
+INSERT INTO member VALUES(2,'26','35000','kai','havartz','3203343445','03-13-2019','554 11th st S');
+INSERT INTO member VALUES(3,'21','3500','sandesh','ghimire','3203323445','02-06-2021','567 9th ave N');]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -43,6 +45,9 @@
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
+  </component>
+  <component name="DBNavigator.Project.FileConnectionMappingManager">
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/data.sql" connection-id="22426408-1db0-4d37-8467-5faae4401f53" session-id="MAIN" current-schema="information_schema" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />
@@ -63,7 +68,9 @@
     <diagnostics-history />
   </component>
   <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
-    <recently-used-interfaces />
+    <recently-used-interfaces>
+      <mapping database-type="POSTGRES" interface-id="DEFAULT" />
+    </recently-used-interfaces>
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
