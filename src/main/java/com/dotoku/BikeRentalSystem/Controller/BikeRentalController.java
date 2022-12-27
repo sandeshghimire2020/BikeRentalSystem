@@ -68,6 +68,7 @@ public class BikeRentalController {
         return bikeRentalServices.getLocationById(id);
     }
 
-    
+    //make api where user can get their profile
+
 
 }
