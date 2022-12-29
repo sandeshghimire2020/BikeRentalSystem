@@ -5,6 +5,7 @@ import com.dotoku.BikeRentalSystem.Models.Location;
 import com.dotoku.BikeRentalSystem.Models.Member;
 import com.dotoku.BikeRentalSystem.Models.RentalDetails;
 import com.dotoku.BikeRentalSystem.Services.BikeRentalServices;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,10 +27,7 @@ public class BikeRentalController {
     }
 
 
-    @GetMapping("/members")
-    public List<Member> getAllMembers(){
-        return bikeRentalServices.getAllMembers();
-    }
+
 
 
     @GetMapping("/rentaldetails")
@@ -69,6 +67,18 @@ public class BikeRentalController {
     }
 
     //make api where user can get their profile
+    @GetMapping("/users")
+    public List<Member> getMembers(){
+        return bikeRentalServices.getMembers();
+    }
+
+    @GetMapping("users/{id}")
+    public List<Member> getMemberByIfd(@PathVariable long id){
+        return bikeRentalServices.getMemberById(id);
+    }
+
+
+
 
 
 }

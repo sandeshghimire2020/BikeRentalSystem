@@ -11,6 +11,7 @@ import com.dotoku.BikeRentalSystem.Repository.RentalDetailsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.Collections;
 import java.util.List;
@@ -21,8 +22,12 @@ public class BikeRentalServices {
     @Autowired
     private MemberRepository memberRepository;
 
-    public List<Member> getAllMembers(){
+    public List<Member> getMembers(){
         return memberRepository.findAll();
+    }
+
+    public List<Member> getMemberById(long id){
+        return memberRepository.findAllById(Collections.singleton(id));
     }
 
 
@@ -70,6 +75,9 @@ public class BikeRentalServices {
         return locationRepository.findAllById(Collections.singleton(id));
 
     }
+
+
+
 
 
 
